@@ -1,14 +1,14 @@
 const express = require('express');
-const cors = require('cors');
-const bodyParser = require('body-parser');
+// const cors = require('cors');
 const mongoose = require('mongoose');
 const postRouter = require('./routes/posts_routes');
 
 const port = process.env.port || 3009;
 
 const app = express();
-app.use(cors());
-app.use(bodyParser.json());
+// app.use(cors());
+// bodyparser middle ware built into express parses the req.body
+ app.use(express.json());
 
 const dbConn = 'mongodb://localhost/blog_app'
 // Set three properties to avoid deprecation warnings:
