@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Example App</title>
+</head>
+<body>
+  <a href="/"><button>Home</button></a>
+  <a href="/user/register"><button>Sign Up</button></a>
+  {{#if loggedIn}}
+    <a href="/user/logout"><button>Log Out</button></a>
+  {{else}}
+    <a href="/user/login"><button>Log In</button></a>
+  {{/if}}
+
+
+    {{{body}}}
+
+</body>
+</html>
