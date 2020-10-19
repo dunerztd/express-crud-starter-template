@@ -19,11 +19,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-// passport
-require("./config/passport");
-app.use(passport.initialize());
-app.use(passport.session());
-
 // express session
 app.use(expressSession({
   secret: 'keyboard cat',
@@ -50,6 +45,11 @@ mongoose.connect(dbConn, {
             console.log('Connected to database!');
         }
     });
+
+// passport
+require("./config/passport");
+app.use(passport.initialize());
+app.use(passport.session());
 
 // handlebars
 app.engine('handlebars', exphbs());
