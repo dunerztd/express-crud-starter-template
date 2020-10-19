@@ -21,6 +21,7 @@ router.get('/login',authRedirect, loginNew)
 router.get('/logout', logout);
 
 // passport routes
+// if aut
 router.post("/login", 
 passport.authenticate('local', {
         successRedirect: "/",

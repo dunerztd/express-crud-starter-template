@@ -58,7 +58,7 @@ app.set('view engine', 'handlebars');
 
 app.get('/', (req, res) => {
     console.log("get on /");
-    console.log(req.user);
+    // console.log(req.session.passport.user)
 
     // renders home through handlebars plus passing variable for denoting whether user is logged in
     res.render("home", 
